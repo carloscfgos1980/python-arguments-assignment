@@ -31,12 +31,12 @@ def force(mass=1, body='earth'):
     return f'The force of {body} is {force}'
 
 
-print(force(1.2, 'sun'))
+print(force())
 
 
 def pull(m1, m2, d):
-    G = (6.674) * (10 ** (-10))
-    pull = G * (((m1) * m2)/(d**2))
+    G = (6.674) * (10 ** -10)
+    pull = G * (((m1) * m2)/d**2)
 
     return pull
 
