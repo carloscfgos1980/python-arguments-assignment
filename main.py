@@ -4,13 +4,26 @@ __human_name__ = 'arguments'
 
 # Add your code after this line
 
+'''
+I had to creat a if else coz if I parameter just like:
+"what'z up"
+it it wont replace the name. To be fair. In the exercise the parameter is just like that:
+greet('Bob', "What's up, <name>!")
+But this way is event cooler..hahaha
+'''
 
-def greet(name='Doc', greeting="Hello"):
-    message = f'{greeting}, {name}'
-    return message
+
+def greet(name='Doc', greeting="Hello, <name>!"):
+    message = ''
+    if greeting == "Hello, <name>!":
+        message = greeting.replace("<name>", name)
+        return message
+    else:
+        message = f'{greeting}, {name}!'
+        return message
 
 
-print(greet('Bob', "What's up!"))
+print(greet('Bob', "what'z up"))
 
 
 def force(mass=1, body='earth'):
